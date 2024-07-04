@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./css/output.css" />
+    <script defer type="module" defer src="./src/main.js"></script>
+    <script defer src="./node_modules/preline/dist/preline.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style></style>
+    <title>UUid Changer</title>
+  </head>
+
+  <body class="dark">
+    <!-- Card Section -->
+    <div class="max-w-4xl px-4 py-10 sm:px-6 lg:px-8 mx-auto">
+      <!-- Card -->
+      <div class="bg-white rounded-xl shadow p-4 sm:p-7 dark:bg-neutral-800">
+        <form>
+          <!-- Grid -->
+          <div class="grid sm:grid-cols-12 gap-2 sm:gap-6">
+            <div class="sm:col-span-3">
+              <label
+                for="uuid"
+                class="inline-block text-sm text-gray-800 mt-2.5 dark:text-neutral-200"
+              >
+                UUID
+              </label>
+            </div>
+            <!-- End Col -->
+
+            <div class="sm:col-span-9">
+              <input
+                id="uuid"
+                type="email"
+                class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                placeholder="f485a6ef-4 . . . "
+              />
+            </div>
+            <!-- End Col -->
+
+            <div class="sm:col-span-3">
+              <label
+                for="links"
+                class="inline-block text-sm text-gray-800 mt-2.5 dark:text-neutral-200"
+              >
+                Links
+              </label>
+            </div>
+            <!-- End Col -->
+
+            <div class="sm:col-span-9">
+              <textarea
+                id="links"
+                class="py-2 px-3 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                rows="6"
+                placeholder="Type Your Links Here..."
+              ></textarea>
+            </div>
+
+            <div class="sm:col-span-3">
+              <label
+                for="output"
+                class="inline-block text-sm text-gray-800 mt-2.5 dark:text-neutral-200"
+              >
+                OutPut
+              </label>
+            </div>
+            <!-- End Col -->
+
+            <div class="sm:col-span-9">
+              <textarea
+                id="output"
+                class="py-2 px-3 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                rows="6"
+                placeholder="Changed Links Here..."
+              ></textarea>
+            </div>
+            <!-- End Col -->
+          </div>
+          <!-- End Grid -->
+
+          <div class="mt-5 flex justify-center gap-x-2">
+            <button
+              id="copy"
+              type="button"
+              class="py-4 px-6 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800"
+            >
+              Copy
+            </button>
+            <button
+              id="go"
+              type="button"
+              class="py-4 px-6 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+            >
+              Go
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- End Card -->
+    </div>
+    <!-- End Card Section -->
+    <!-- Toast -->
+    <div id="toast" class="absolute top-0 end-2 hidden">
+      <div
+        class="max-w-xs bg-white border border-gray-200 rounded-xl shadow-lg dark:bg-neutral-800 dark:border-neutral-700"
+        role="alert"
+      >
+        <div class="flex p-4">
+          <div class="flex-shrink-0">
+            <svg
+              class="flex-shrink-0 size-4 text-teal-500 mt-0.5"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+              ></path>
+            </svg>
+          </div>
+          <div class="ms-3">
+            <p class="text-sm text-gray-700 dark:text-neutral-400">
+              Copying to clipboard was successful!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
